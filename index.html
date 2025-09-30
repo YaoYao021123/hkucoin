@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKU Coin Fund - Digital Asset Investment Fund</title>
+    <meta name="description" content="An actively managed fund combining core large-cap equities with satellite positions in digital assets and high-growth opportunities.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="assets/images/logo.png" alt="HKU Coin Logo">
+                    <span class="logo-text">HKU Coin Fund</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#performance" class="nav-link">Performance</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#strategy" class="nav-link">Strategy</a>
+                    <a href="#fees" class="nav-link">Fees</a>
+                    <a href="#contact" class="nav-link cta-button">Invest Now</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">The Future of <span class="gradient-text">Active Investment</span></h1>
+                <p class="hero-subtitle">Combining quality large-cap equities with tactical digital asset opportunities</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="hero-return">+17.53%</div>
+                        <div class="stat-label">Total Return</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="hero-alpha">+12.6%</div>
+                        <div class="stat-label">Alpha Generated</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="hero-sharpe">0.83</div>
+                        <div class="stat-label">Sharpe Ratio</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#contact" class="button button-primary">Get Started</a>
+                    <a href="#performance" class="button button-secondary">View Performance</a>
+                </div>
+                <p class="hero-disclaimer">As of September 26, 2025 | Past performance does not guarantee future results</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="section performance-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Fund Performance</h2>
+                <p class="section-subtitle">Significant outperformance vs. benchmark (90% SPY + 10% SHY)</p>
+            </div>
+
+            <div class="performance-grid">
+                <div class="performance-chart-container">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-label">Total Return</div>
+                        <div class="metric-value positive" id="total-return">+17.53%</div>
+                        <div class="metric-comparison">vs Benchmark: +3.31%</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Portfolio Value</div>
+                        <div class="metric-value" id="portfolio-value">$1,175,347</div>
+                        <div class="metric-comparison">Initial: $1,000,000</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Sharpe Ratio</div>
+                        <div class="metric-value" id="sharpe-ratio">0.83</div>
+                        <div class="metric-comparison">Risk-Adjusted Return</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Max Drawdown</div>
+                        <div class="metric-value negative" id="max-drawdown">-1.67%</div>
+                        <div class="metric-comparison">Downside Protection</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Volatility (Ann.)</div>
+                        <div class="metric-value" id="volatility">12.49%</div>
+                        <div class="metric-comparison">Risk Level</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Information Ratio</div>
+                        <div class="metric-value" id="info-ratio">1.02</div>
+                        <div class="metric-comparison">Active Management</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Current Portfolio</h2>
+                <p class="section-subtitle">Core-Satellite Strategy with Tactical Positioning</p>
+            </div>
+
+            <div class="portfolio-overview">
+                <div class="portfolio-summary">
+                    <div class="summary-card">
+                        <h3>Portfolio Composition</h3>
+                        <div class="composition-item">
+                            <span class="comp-label">Cash & Equivalents</span>
+                            <span class="comp-bar">
+                                <span class="comp-fill" style="width: 87.8%" data-color="cash"></span>
+                            </span>
+                            <span class="comp-value">87.8%</span>
+                        </div>
+                        <div class="composition-item">
+                            <span class="comp-label">Digital Assets (SOL)</span>
+                            <span class="comp-bar">
+                                <span class="comp-fill" style="width: 12.4%" data-color="crypto"></span>
+                            </span>
+                            <span class="comp-value">12.4%</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-card">
+                        <h3>Portfolio Stats</h3>
+                        <div class="stat-row">
+                            <span>Total Value:</span>
+                            <strong id="port-value">$1,175,347.28</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Cash Position:</span>
+                            <strong id="cash-value">$1,032,379.28</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Market Value:</span>
+                            <strong id="market-value">$142,968.00</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Total Trades:</span>
+                            <strong id="trades-count">57</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="holdings-table">
+                    <h3>Current Holdings</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Description</th>
+                                <th>Quantity</th>
+                                <th>Market Value</th>
+                                <th>Return</th>
+                                <th>Weight</th>
+                            </tr>
+                        </thead>
+                        <tbody id="holdings-body">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section id="strategy" class="section strategy-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Investment Strategy</h2>
+                <p class="section-subtitle">Core-Satellite Approach with Active Risk Management</p>
+            </div>
+
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <div class="strategy-icon">🎯</div>
+                    <h3>Core Holdings</h3>
+                    <p>Quality large-cap equities (AAPL, UNH) provide market beta and stable foundation for long-term growth.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-icon">🚀</div>
+                    <h3>Satellite Positions</h3>
+                    <p>Tactical opportunities in leveraged ETFs, digital assets, and high-growth stocks generate alpha.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-icon">🛡️</div>
+                    <h3>Risk Hedging</h3>
+                    <p>Gold (GLD) and long-duration Treasuries (TLT) provide downside protection during market volatility.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-icon">⚡</div>
+                    <h3>Active Management</h3>
+                    <p>Event-driven, momentum, and macro-driven trades capitalize on short-term opportunities.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-icon">🔒</div>
+                    <h3>Disciplined Execution</h3>
+                    <p>Staged entries, strict stop-losses, margin limits (≤10%), and minimal short selling.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <div class="strategy-icon">📊</div>
+                    <h3>Quantitative Support</h3>
+                    <p>Data-driven performance analysis and risk monitoring guide investment decisions.</p>
+                </div>
+            </div>
+
+            <div class="market-outlook">
+                <h3>Market Outlook - Q4 2025</h3>
+                <div class="outlook-grid">
+                    <div class="outlook-item">
+                        <strong>Fed Rate Cut Cycle:</strong>
+                        <p>Positioning with TLT for long-duration Treasury exposure</p>
+                    </div>
+                    <div class="outlook-item">
+                        <strong>Technology Leadership:</strong>
+                        <p>Maintain AI/ML exposure through core holdings</p>
+                    </div>
+                    <div class="outlook-item">
+                        <strong>Capital Deployment:</strong>
+                        <p>Deploy cash reserves into core holdings (AAPL/UNH)</p>
+                    </div>
+                    <div class="outlook-item">
+                        <strong>Crypto Catalysts:</strong>
+                        <p>Hold SOL for potential spot ETF approval</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fees Section -->
+    <section id="fees" class="section fees-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Fees & Costs</h2>
+                <p class="section-subtitle">Transparent and competitive fee structure</p>
+            </div>
+
+            <div class="fees-grid">
+                <div class="fee-card highlight">
+                    <h3>Management Fee</h3>
+                    <div class="fee-amount">1.75%</div>
+                    <p>Per annum of assets under management (AUM)</p>
+                </div>
+
+                <div class="fee-card highlight">
+                    <h3>Performance Fee</h3>
+                    <div class="fee-amount">20%</div>
+                    <p>Of outperformance vs. benchmark, subject to high-water mark</p>
+                </div>
+
+                <div class="fee-card">
+                    <h3>Trading Commissions</h3>
+                    <div class="fee-amount">$3</div>
+                    <p>Per trade (estimated)</p>
+                </div>
+
+                <div class="fee-card">
+                    <h3>Total Annual Expenses</h3>
+                    <div class="fee-amount">~2.3%</div>
+                    <p>Estimated including all costs</p>
+                </div>
+            </div>
+
+            <div class="fee-details">
+                <h3>Fee Structure Details</h3>
+                <ul>
+                    <li><strong>Explicit Fees:</strong> Management and performance fees are directly deducted from fund assets</li>
+                    <li><strong>Implicit Costs:</strong> Bid-ask spreads and slippage minimized through disciplined trading</li>
+                    <li><strong>No Redemption Fees:</strong> Investors can redeem shares without additional charges</li>
+                    <li><strong>Administrative Expenses:</strong> Included in total fund operating expenses</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Disclosure Section -->
+    <section class="section risk-section">
+        <div class="container">
+            <div class="risk-content">
+                <h3>Important Risk Disclosures</h3>
+                <div class="risk-grid">
+                    <div class="risk-item">
+                        <strong>⚠️ Investment Risk:</strong>
+                        <p>An investment in the Fund involves risk, including the possible loss of principal.</p>
+                    </div>
+                    <div class="risk-item">
+                        <strong>📉 Market Risk:</strong>
+                        <p>Equity securities are subject to market and company-specific risks; small- and micro-cap issuers may be more volatile.</p>
+                    </div>
+                    <div class="risk-item">
+                        <strong>🔐 Digital Asset Risk:</strong>
+                        <p>Digital assets are highly speculative and face extreme price volatility and regulatory risks.</p>
+                    </div>
+                    <div class="risk-item">
+                        <strong>⚖️ Leverage Risk:</strong>
+                        <p>Use of leverage and frequent trading can magnify gains and losses and increase transaction costs.</p>
+                    </div>
+                </div>
+                <p class="risk-disclaimer"><strong>Past performance does not guarantee future results.</strong> Before investing, carefully consider the Fund's investment objectives, risks, charges and expenses. This and other information is contained in the prospectus or summary prospectus. Please read it carefully before investing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Invest Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Ready to Invest?</h2>
+                <p>Get started with HKU Coin Fund and access professional digital asset management</p>
+                <div class="contact-options">
+                    <a href="mailto:invest@hkucoin.fund" class="button button-primary">
+                        Contact Us
+                    </a>
+                    <a href="#" class="button button-secondary" id="download-prospectus">
+                        Download Prospectus
+                    </a>
+                </div>
+                <p class="contact-info">Email: invest@hkucoin.fund | Based in Hong Kong, China</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="HKU Coin Logo">
+                    <p>© 2025 HKU Coin Fund. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#performance">Performance</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#strategy">Strategy</a>
+                    <a href="#fees">Fees</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <p><small>Not FDIC Insured — No Bank Guarantee — May Lose Value. Distributor: HKU Coin Fund Services. This website is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any securities. Investments in the Fund are subject to investment risks, including the possible loss of principal amount invested.</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
