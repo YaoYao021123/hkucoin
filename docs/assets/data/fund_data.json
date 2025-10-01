@@ -1,0 +1,139 @@
+{
+  "asOfDate": "2025-09-26",
+  "performanceData": {
+    "totalReturn": 17.53,
+    "benchmarkReturn": 3.31,
+    "portfolioValue": 1175347.28,
+    "initialValue": 1000000,
+    "cashBalance": 1032379.28,
+    "marketValue": 142968.0,
+    "tradesCount": 57
+  },
+  "riskMetrics": {
+    "sharpe": 0.83,
+    "beta": 1.05,
+    "alpha": 12.6,
+    "info_ratio": 1.02,
+    "treynor": 9.94,
+    "max_drawdown": -1.67,
+    "volatility": 12.49,
+    "correlation": 0.12
+  },
+  "historicalData": {
+    "dates": [
+      "9/3",
+      "9/4",
+      "9/5",
+      "9/8",
+      "9/9",
+      "9/10",
+      "9/11",
+      "9/12",
+      "9/15",
+      "9/16",
+      "9/17",
+      "9/18",
+      "9/19",
+      "9/22",
+      "9/23",
+      "9/24",
+      "9/25",
+      "9/26"
+    ],
+    "portfolioValues": [
+      999265.73,
+      1007915.017,
+      1017985.72,
+      1032864.77,
+      1043225.11,
+      1029953.21,
+      1166602.94,
+      1171676.7,
+      1174149.34,
+      1173746.3,
+      1176214.61,
+      1175377.95,
+      1189780.42,
+      1187202.3,
+      1185572.44,
+      1179265.59,
+      1169900.43,
+      1175347.28
+    ],
+    "benchmarkValues": [
+      1004950.17,
+      1012581.94,
+      1010089.26,
+      1012383.44,
+      1014404.46,
+      1017055.95,
+      1024699.52,
+      1024378.61,
+      1029323.96,
+      1028098.08,
+      1026898.99,
+      1031180.18,
+      1035814.02,
+      1040174.54,
+      1035116.11,
+      1032102.25,
+      1027729.65,
+      1033090.83
+    ]
+  },
+  "currentHoldings": [
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "quantity": 700,
+      "marketValue": 146048.0,
+      "return": -10.63,
+      "weight": 12.4,
+      "type": "crypto"
+    },
+    {
+      "symbol": "CASH",
+      "name": "Cash & Equivalents",
+      "quantity": 1,
+      "marketValue": 1032379.28,
+      "return": 0.0,
+      "weight": 87.8,
+      "type": "cash"
+    }
+  ],
+  "fundDetails": {
+    "fundName": "HKU Coin Fund",
+    "inceptionDate": "2025-09-02",
+    "benchmarkName": "90% SPY + 10% SHY",
+    "currency": "USD",
+    "fundManager": "HKU Coin Fund Management Team",
+    "strategy": "Digital Asset Focus with Risk Management",
+    "liquidity": "Monthly",
+    "minimumInvestment": 10000,
+    "managementFee": 2.0,
+    "performanceFee": 20.0,
+    "hurdleRate": 8.0
+  },
+  "monthlyPerformance": [
+    {
+      "month": "Sep 2025",
+      "return": 17.53,
+      "benchmarkReturn": 3.31,
+      "alpha": 14.22
+    }
+  ],
+  "topHoldings": [
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "weight": 12.4,
+      "performance": -10.63
+    },
+    {
+      "symbol": "CASH",
+      "name": "Cash & Equivalents",
+      "weight": 87.8,
+      "performance": 0.0
+    }
+  ]
+}

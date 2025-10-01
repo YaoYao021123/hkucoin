@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKUCoin Fund - Professional Digital Asset Management</title>
+    <meta name="description" content="HKUCoin Fund - Professional investment fund specializing in digital assets and quantitative strategies.">
+    <meta name="keywords" content="investment fund, digital assets, cryptocurrency, quantitative trading, portfolio management">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="HKUCoin Fund - Professional Digital Asset Management">
+    <meta property="og:description" content="Professional investment fund with 17.53% returns, specializing in digital assets and quantitative strategies">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="assets/images/logo.png?v=1" alt="HKUCoin Fund">
+                    <span class="logo-text">HKUCoin Fund</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#performance" class="nav-link">Performance</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#strategy" class="nav-link">Strategy</a>
+                    <a href="#fees" class="nav-link">Fees</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="assets/documents/Summary Prospectus_Group2.pdf" target="_blank" class="nav-link">Prospectus</a>
+                    <a href="#contact" class="cta-button">Invest Now</a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">HKUCoin Fund</span><br>
+                    Professional Digital Asset Management
+                </h1>
+                <p class="hero-subtitle">
+                    Delivering exceptional returns through quantitative strategies and expert risk management in the digital asset space
+                </p>
+
+                <!-- Key Performance Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">+238.18%</div>
+                        <div class="stat-label">Total Return (Annualized)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">$1.18M</div>
+                        <div class="stat-label">Portfolio Value</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">4.69</div>
+                        <div class="stat-label">Sharpe Ratio (Annualized)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">+91.32%</div>
+                        <div class="stat-label">Alpha (Annualized)</div>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#performance" class="button button-primary">View Performance</a>
+                    <a href="#contact" class="button button-secondary">Get Started</a>
+                    <a href="assets/documents/Summary Prospectus_Group2.pdf" target="_blank" class="button button-secondary">Download Prospectus</a>
+                </div>
+
+                <p class="hero-disclaimer">
+                    <strong>As of September 26, 2025</strong> | Past performance does not guarantee future results
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="section performance-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Exceptional Performance</h2>
+                <p class="section-subtitle">
+                    Consistently outperforming benchmarks with sophisticated risk management
+                </p>
+            </div>
+
+            <div class="performance-grid">
+                <!-- Performance Chart -->
+                <div class="performance-chart-container">
+                    <h3>HKUCoin Fund vs Benchmark Performance</h3>
+                    <canvas id="performanceChart" width="400" height="200"></canvas>
+                </div>
+
+                <!-- Performance Metrics -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-label">Annual Return</div>
+                        <div class="metric-value positive">+238.18%</div>
+                        <div class="metric-comparison">Annualized | Benchmark: +49.84%</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Sharpe Ratio</div>
+                        <div class="metric-value positive">4.69</div>
+                        <div class="metric-comparison">Annualized risk-adjusted return</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Alpha</div>
+                        <div class="metric-value positive">+91.32%</div>
+                        <div class="metric-comparison">Annualized excess return</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Maximum Drawdown</div>
+                        <div class="metric-value">-1.67%</div>
+                        <div class="metric-comparison">Excellent risk control</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Historical Portfolio & Holdings</h2>
+                <p class="section-subtitle">
+                    Historical transaction data and current asset allocation
+                </p>
+            </div>
+
+            <div class="portfolio-overview">
+                <!-- Portfolio Summary -->
+                <div class="portfolio-summary">
+                    <div class="summary-card">
+                        <h3>Portfolio Allocation</h3>
+                        <div class="chart-container">
+                            <canvas id="portfolioChart" width="300" height="300"></canvas>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: rgb(101, 89, 249);"></div>
+                                <span class="legend-label">Digital Assets</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: rgb(156, 163, 175);"></div>
+                                <span class="legend-label">Cash & Equivalents</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="summary-card">
+                        <h3>Portfolio Overview</h3>
+                        <div class="stat-row">
+                            <span>Total Portfolio Value</span>
+                            <strong>$1.18M</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Number of Holdings</span>
+                            <strong>Multiple</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Last Updated</span>
+                            <strong>Sep 26, 2025</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Inception Date</span>
+                            <strong>Sep 2, 2025</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Historical Transactions Overview -->
+                <div class="holdings-table">
+                    <h3>Historical Purchase Transactions</h3>
+                    <div class="transactions-overview">
+                        <div class="chart-container">
+                            <canvas id="transactionsChart" width="300" height="300"></canvas>
+                        </div>
+                        <div class="transactions-legend">
+                            <h4>Asset Categories</h4>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: rgb(101, 89, 249);"></div>
+                                <span class="legend-label">Technology Stocks</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: rgb(59, 130, 246);"></div>
+                                <span class="legend-label">Digital Assets</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: rgb(16, 185, 129);"></div>
+                                <span class="legend-label">Healthcare</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: rgb(251, 146, 60);"></div>
+                                <span class="legend-label">Real Estate</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: rgb(156, 163, 175);"></div>
+                                <span class="legend-label">ETFs & Other</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="transaction-summary">
+                        <div class="summary-stat">
+                            <span class="stat-label">Total Transactions</span>
+                            <span class="stat-value">32</span>
+                        </div>
+                        <div class="summary-stat">
+                            <span class="stat-label">Total Invested</span>
+                            <span class="stat-value">$2.96M</span>
+                        </div>
+                        <div class="summary-stat">
+                            <span class="stat-label">Assets Traded</span>
+                            <span class="stat-value">11</span>
+                        </div>
+                    </div>
+                    <div class="table-note">
+                        <p>Transaction activity across multiple asset classes since fund inception</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section id="strategy" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Investment Strategy</h2>
+                <p class="section-subtitle">
+                    Core-satellite approach combining quantitative analysis with expert insight
+                </p>
+            </div>
+
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <div class="strategy-icon">📈</div>
+                    <h3>Quantitative Analysis</h3>
+                    <p>Data-driven investment decisions using advanced statistical models and machine learning algorithms.</p>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-icon">⚖️</div>
+                    <h3>Core-Satellite Approach</h3>
+                    <p>Balanced portfolio with core holdings providing stability and satellite positions for alpha generation.</p>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-icon">🔒</div>
+                    <h3>Risk Management</h3>
+                    <p>Comprehensive risk assessment and position sizing to protect capital while seeking returns.</p>
+                </div>
+            </div>
+
+            <!-- Market Outlook -->
+            <div class="market-outlook">
+                <h3>Market Outlook</h3>
+                <div class="outlook-grid">
+                    <div class="outlook-item">
+                        <strong>Digital Assets</strong>
+                        <p>Bullish on institutional adoption and technological innovation in the blockchain space.</p>
+                    </div>
+                    <div class="outlook-item">
+                        <strong>Risk Environment</strong>
+                        <p>Monitoring regulatory developments while maintaining diversified exposure to quality assets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fees Section -->
+    <section id="fees" class="section fees-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Transparent Fee Structure</h2>
+                <p class="section-subtitle">
+                    Clear, competitive fees with no hidden charges
+                </p>
+            </div>
+
+            <div class="fees-grid">
+                <div class="fee-card">
+                    <h3>Management Fee</h3>
+                    <div class="fee-amount">1.75%</div>
+                    <p>Per annum of assets under management (AUM)</p>
+                </div>
+                <div class="fee-card highlight">
+                    <h3>Performance Fee</h3>
+                    <div class="fee-amount">20%</div>
+                    <p>Of fund's outperformance relative to benchmark, subject to high-water mark</p>
+                </div>
+                <div class="fee-card">
+                    <h3>Trading Commissions</h3>
+                    <div class="fee-amount">$3</div>
+                    <p>Per trade (estimated)</p>
+                </div>
+                <div class="fee-card">
+                    <h3>Total Annual Expenses</h3>
+                    <div class="fee-amount">2.3%</div>
+                    <p>Estimated total fund operating expenses</p>
+                </div>
+                <div class="fee-card">
+                    <h3>Minimum Investment</h3>
+                    <div class="fee-amount">$10,000</div>
+                    <p>Minimum initial investment amount</p>
+                </div>
+            </div>
+
+            <div class="fee-details">
+                <h3>Complete Fee Structure</h3>
+                <div class="fee-breakdown">
+                    <div class="fee-category">
+                        <h4>Explicit Fees</h4>
+                        <ul>
+                            <li><strong>Management Fee:</strong> 1.75% per annum of AUM</li>
+                            <li><strong>Performance Fee:</strong> 20% of outperformance vs benchmark</li>
+                            <li><strong>Redemption Fees:</strong> None</li>
+                        </ul>
+                    </div>
+                    <div class="fee-category">
+                        <h4>Other Costs</h4>
+                        <ul>
+                            <li><strong>Trading Commissions:</strong> $3 per trade (estimated)</li>
+                            <li><strong>Borrowing Costs:</strong> Variable, based on market conditions</li>
+                            <li><strong>Administrative Expenses:</strong> Included in total fund expenses</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fee-note">
+                    <p><strong>Note:</strong> Explicit fees such as management and performance fees are directly deducted from the fund's assets. Implicit costs, including bid-ask spreads and slippage, are minimized through disciplined trading strategies and position sizing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Section -->
+    <section id="risk" class="section risk-section">
+        <div class="container">
+            <div class="risk-content">
+                <h3>Important Risk Considerations</h3>
+                <div class="risk-grid">
+                    <div class="risk-item">
+                        <strong>Market Volatility</strong>
+                        <p>Digital assets are subject to extreme price volatility and may lose value rapidly.</p>
+                    </div>
+                    <div class="risk-item">
+                        <strong>Regulatory Risk</strong>
+                        <p>Changing regulations may impact the value and legality of digital asset investments.</p>
+                    </div>
+                    <div class="risk-item">
+                        <strong>Technology Risk</strong>
+                        <p>Blockchain technologies may be vulnerable to hacking, fraud, or technical failures.</p>
+                    </div>
+                    <div class="risk-item">
+                        <strong>Liquidity Risk</strong>
+                        <p>Certain digital assets may have limited trading volume and market depth.</p>
+                    </div>
+                </div>
+                <div class="risk-disclaimer">
+                    <strong>Investment Disclaimer:</strong> An investment in the Fund involves risk, including the possible loss of principal.
+                    Past performance does not guarantee future results. Digital assets are highly speculative and may not be suitable for all investors.
+                    <strong>Not FDIC Insured  No Bank Guarantee  May Lose Value</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Start Your Investment Journey</h2>
+                <p>Join sophisticated investors who trust HKUCoin Fund for digital asset management</p>
+                <div class="contact-options">
+                    <a href="mailto:invest@hkucoin.fund" class="button button-primary">Contact Us</a>
+                    <a href="assets/documents/Summary Prospectus_Group2.pdf" target="_blank" class="button button-secondary">Download Prospectus</a>
+                    <a href="#" class="button button-secondary" onclick="window.print()">Print Summary</a>
+                </div>
+                <div class="contact-info">
+                    <p>Email: invest@hkucoin.fund</p>
+                    <p>Response time: Within 24 business hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>HKUCoin Fund</span>
+                    <p>Professional Digital Asset Management</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#performance">Performance</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#strategy">Strategy</a>
+                    <a href="#fees">Fees</a>
+                    <a href="#contact">Contact</a>
+                    <a href="assets/documents/Summary Prospectus_Group2.pdf" target="_blank">Prospectus</a>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <p>© 2025 HKUCoin Fund. All rights reserved.</p>
+                <p>Past performance does not guarantee future results. Digital assets are highly speculative investments.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
