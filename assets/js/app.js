@@ -7,14 +7,26 @@ let performanceChart = null;
 // ===== Initialize Application =====
 document.addEventListener('DOMContentLoaded', function() {
     try {
-        // Initialize components directly
+        // Initialize basic components
         initializeNavigation();
-        initializePerformanceChart();
-        initializePortfolioChart();
-        initializeTransactionsChart();
         initializeScrollEffects();
 
-        console.log('HKU Coin Fund website initialized successfully');
+        // Wait for Chart.js to load before initializing charts
+        function initializeCharts() {
+            if (typeof Chart !== 'undefined') {
+                initializePerformanceChart();
+                initializePortfolioChart();
+                initializeTransactionsChart();
+                console.log('HKUCoin Fund website initialized successfully');
+            } else {
+                // Retry after 1 second if Chart.js is not loaded yet
+                setTimeout(initializeCharts, 1000);
+            }
+        }
+
+        // Start chart initialization after a short delay
+        setTimeout(initializeCharts, 500);
+
     } catch (error) {
         console.error('Error initializing app:', error);
     }
@@ -170,6 +182,18 @@ function initializePerformanceChart() {
         return;
     }
 
+    // Check if Chart.js is loaded
+    if (typeof Chart === 'undefined') {
+        console.error('Chart.js is not loaded');
+        const container = ctx.parentElement;
+        if (container) {
+            container.innerHTML = '<div style="text-align: center; padding: 2rem; color: #6B7280;">Loading charts...</div>';
+        }
+        // Retry after 2 seconds
+        setTimeout(initializePerformanceChart, 2000);
+        return;
+    }
+
     try {
         // Use actual performance data from CSV
         const dates = ["Sep 3", "Sep 4", "Sep 5", "Sep 8", "Sep 9", "Sep 10", "Sep 11", "Sep 12", "Sep 15", "Sep 16", "Sep 17", "Sep 18", "Sep 19", "Sep 22", "Sep 23", "Sep 24", "Sep 25", "Sep 26"];
@@ -309,6 +333,12 @@ function initializePortfolioChart() {
     const ctx = document.getElementById('portfolioChart');
     if (!ctx) return;
 
+    // Check if Chart.js is loaded
+    if (typeof Chart === 'undefined') {
+        console.error('Chart.js is not loaded for portfolio chart');
+        return;
+    }
+
     try {
         // Create pie chart without showing data values
         new Chart(ctx, {
@@ -355,6 +385,12 @@ function initializePortfolioChart() {
 function initializeTransactionsChart() {
     const ctx = document.getElementById('transactionsChart');
     if (!ctx) return;
+
+    // Check if Chart.js is loaded
+    if (typeof Chart === 'undefined') {
+        console.error('Chart.js is not loaded for transactions chart');
+        return;
+    }
 
     try {
         // Create pie chart for transaction distribution
