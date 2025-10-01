@@ -105,7 +105,7 @@ git push -u origin main
 5. Click "Save"
 
 Your website will be available at:
-`https://YOUR_USERNAME.github.io/hku-coin-fund/`
+`https://yaoyao021123.github.io/hkucoin/`
 
 ## 📊 Fund Performance Snapshot
 
