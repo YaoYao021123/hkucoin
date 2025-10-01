@@ -61,24 +61,24 @@
       1175347.28
     ],
     "benchmarkValues": [
-      1004950.1701508183,
-      1012581.9369039309,
-      1010089.2592121975,
-      1012383.4433661965,
-      1014404.4606976709,
-      1017055.9533783394,
-      1024699.523723908,
-      1024378.6069962297,
-      1029323.9645221956,
-      1028098.0754920588,
-      1026898.9899754028,
-      1031180.1802137643,
-      1035814.0206956076,
-      1040174.5393302895,
-      1035116.1137361442,
-      1032102.2458173366,
-      1027729.6498142803,
-      1033090.8333512563
+      1004950.17,
+      1012581.94,
+      1010089.26,
+      1012383.44,
+      1014404.46,
+      1017055.95,
+      1024699.52,
+      1024378.61,
+      1029323.96,
+      1028098.08,
+      1026898.99,
+      1031180.18,
+      1035814.02,
+      1040174.54,
+      1035116.11,
+      1032102.25,
+      1027729.65,
+      1033090.83
     ]
   },
   "currentHoldings": [
@@ -88,7 +88,8 @@
       "quantity": 700,
       "marketValue": 146048.0,
       "return": -10.63,
-      "weight": 12.4
+      "weight": 12.4,
+      "type": "crypto"
     },
     {
       "symbol": "CASH",
@@ -96,7 +97,43 @@
       "quantity": 1,
       "marketValue": 1032379.28,
       "return": 0.0,
-      "weight": 87.8
+      "weight": 87.8,
+      "type": "cash"
+    }
+  ],
+  "fundDetails": {
+    "fundName": "HKU Coin Fund",
+    "inceptionDate": "2025-09-02",
+    "benchmarkName": "90% SPY + 10% SHY",
+    "currency": "USD",
+    "fundManager": "HKU Coin Fund Management Team",
+    "strategy": "Digital Asset Focus with Risk Management",
+    "liquidity": "Monthly",
+    "minimumInvestment": 10000,
+    "managementFee": 2.0,
+    "performanceFee": 20.0,
+    "hurdleRate": 8.0
+  },
+  "monthlyPerformance": [
+    {
+      "month": "Sep 2025",
+      "return": 17.53,
+      "benchmarkReturn": 3.31,
+      "alpha": 14.22
+    }
+  ],
+  "topHoldings": [
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "weight": 12.4,
+      "performance": -10.63
+    },
+    {
+      "symbol": "CASH",
+      "name": "Cash & Equivalents",
+      "weight": 87.8,
+      "performance": 0.0
     }
   ]
 }
