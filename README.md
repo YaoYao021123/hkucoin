@@ -1,5 +1,25 @@
 # HKU Coin Fund - Investment Fund Website
 
+[![Live Website](https://img.shields.io/badge/🌐-Live_Website-blue?style=for-the-badge&logo=github-pages)](https://yaoyao021123.github.io/hkucoin/)
+
+## 🚀 **访问我们的网站**
+
+<div align="center">
+
+[**🌟 HKUCoin Fund 官网 🌟**](https://yaoyao021123.github.io/hkucoin/)
+
+**专业的数字资产管理基金**
+- 实时业绩展示
+- 历史交易分析
+- 透明费用结构
+- 响应式设计
+
+[**点击访问 →**](https://yaoyao021123.github.io/hkucoin/)
+
+</div>
+
+---
+
 Professional fund website showcasing performance, portfolio holdings, and investment strategy.
 
 ## 📊 Features
